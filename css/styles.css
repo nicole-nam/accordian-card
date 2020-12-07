@@ -13,8 +13,8 @@ html {
 body {
   box-sizing: border-box;
   font-family: "Kumbh Sans", sans-serif;
-  height: 100%;
-  width: 100%;
+  overflow: hidden; /*hide scroll bars*/
+  font-size: 1.2rem;
 }
 
 .header {
@@ -23,3 +23,25 @@ body {
   padding: 2rem;
 }
 
+.card-question {
+}
+
+.card-question a {
+  color: hsl(240, 6%, 50%);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.open a {
+  color: hsl(237, 12%, 33%);
+}
+a::after {
+  content: url("../images/icon-arrow-down.svg");
+}
+
+.card-answer {
+  display: none;
+  color: hsl(240, 6%, 50%);
+  font-weight: 400;
+}
