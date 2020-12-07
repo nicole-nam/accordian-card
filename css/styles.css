@@ -15,15 +15,66 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   overflow: hidden; /*hide scroll bars*/
   font-size: 1.2rem;
+  line-height: 1.7;
+  overflow: hidden;
 }
 
 .header {
-  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   height: 100vh;
-  padding: 2rem;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  position: relative;
+}
+
+.accordian-wrapper {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0.1rem 2rem rgb(92, 92, 92);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 4rem);
+  padding-top: 8rem;
+}
+
+
+
+.accordian-box {
+  padding: 1rem 2rem;
+}
+
+.accordian-box:last-child {
+  padding-bottom: 5rem;
+}
+
+.imageBox:first-child {
+  position: absolute;
+  top: -11rem;
+  left: 50%;
+  transform: translateX(-55%);
+}
+
+.imageBox:last-child{
+  position: absolute;
+  top: 110px;
+  left: -50%;
+  transform: translateX(67%);
+}
+
+.accordian-box .title {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 2.5rem;
 }
 
 .card-question {
+  padding-bottom: 1rem;
 }
 
 .card-question a {
@@ -38,10 +89,26 @@ body {
 }
 a::after {
   content: url("../images/icon-arrow-down.svg");
+  float: right;
+  padding-right: 0.5rem;
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+a:hover {
+  color: hsl(14, 88%, 65%);
 }
 
 .card-answer {
   display: none;
   color: hsl(240, 6%, 50%);
   font-weight: 400;
+}
+
+.accordian-box::after {
+  content: "";
+  display: block;
+  border-bottom: 0.1rem solid hsl(240, 5%, 91%);
 }
