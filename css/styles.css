@@ -7,121 +7,53 @@
 }
 
 html {
-  font-size: 62.5%; /* 10 px */
+  font-size: 62.5%;
 }
 
 body {
-  box-sizing: border-box;
-  font-family: "Kumbh Sans", sans-serif;
-  overflow: hidden; /*hide scroll bars*/
-  font-size: 1.2rem;
+  font-family: 'Kumbh Sans', sans-serif;
   line-height: 1.7;
-  overflow: hidden;
-}
-
-.header {
-  height: 100vh;
-  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-  background-repeat: no-repeat;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
   background-position: top;
+  background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  height: 100vh;
 }
 
-.accordian-wrapper {
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 0.1rem 2rem rgb(92, 92, 92);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% - 4rem);
-  padding-top: 10rem;
+.accordian-container {
+  padding: 10rem 1.5rem;
 }
 
-.accordian-box {
-  padding: 1rem 2rem;
-}
-
-.accordian-box:last-child {
-  padding-bottom: 5rem;
-}
-
-.imageBox {
-  position: absolute;
-  top: -11rem;
-  left: 6%;
-}
-
-.imageBox:first-child {
-  animation: MoveUpDown 3s linear infinite;
-}
-
-#shadow {
-  position: absolute;
-  top: 110px;
-  left: -50%;
-  transform: translateX(67%);
-}
-
-.accordian-box .title {
-  width: 100%;
-  margin: auto;
+.accordian-card {
+  max-width: 60rem;
+  margin: 0 auto;
   text-align: center;
-  font-weight: 700;
-  font-size: 1.5rem;
-  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 .5rem 4rem hsl(237, 12%, 33%);
 }
 
-.card-question {
-  padding-bottom: 1rem;
+.heading-text {
+font-size: 3rem;
+font-weight: 700;
 }
 
-.card-question a {
-  color: hsl(240, 6%, 50%);
-  font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
+.paragraph-text{
+font-weight: 700;
+color:  hsl(240, 6%, 50%);
+border-bottom: .5px solid hsl(240, 5%, 91%);
 }
 
-.open a {
-  color: hsl(237, 12%, 33%);
-}
-a::after {
-  content: url("../images/icon-arrow-down.svg");
-  float: right;
-  padding-right: 0.5rem;
+.paragraph-text:last-child {
+  border: none;
 }
 
-.flip {
-  transform: rotate(180deg);
-}
-
-a:hover {
-  color: hsl(14, 88%, 65%);
-}
-
-.card-answer {
-  display: none;
-  color: hsl(240, 6%, 50%);
-  font-weight: 400;
-}
-
-.accordian-box::after {
-  content: "";
-  display: block;
-  border-bottom: 0.1rem solid hsl(240, 5%, 91%);
-}
-
-/* animations */
-
-@keyframes MoveUpDown {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+.paragraph-text::after{
+  content:url("../images/icon-arrow-down.svg");
 }
