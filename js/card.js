@@ -1,19 +1,15 @@
-$( document ).ready(function() {
-    console.log( "ready!" );
+$(document).ready(function () {
+  $('.card-question').on('click', function(){    
+    if($(this).parents('.card-item').hasClass('open')){
+     $(this).parents('.card-item').find('.card-answer').slideUp();
+     $(this).parents('.card-item').removeClass('open');
+    }
+    else{
+     $('.card-answer').slideUp();
+     $('.card-item').removeClass('open');
 
-    $('.card-question').on('click', function(){    
-        if($(this).parents('.accordian-box').hasClass('open')){
-         $(this).parents('.accordian-box').find('.card-answer').slideUp();
-         $(this).parents('.accordian-box').removeClass('open');
-        }
-        else{
-         $('.card-answer').slideUp();
-         $('.accordian-box').removeClass('open');
-         $(this).parents('.accordian-box').find('.card-answer').slideDown();
-         $(this).parents('.accordian-box').addClass('open');        
-        }
-     });
-
-
+     $(this).parents('.card-item').find('.card-answer').slideDown();
+     $(this).parents('.card-item').addClass('open');        
+    }
+ });
 });
-
