@@ -3,13 +3,19 @@ $(document).ready(function () {
     if($(this).parents('.card-item').hasClass('open')){
      $(this).parents('.card-item').find('.card-answer').slideUp();
      $(this).parents('.card-item').removeClass('open');
+     $(this).children('a').css("color"," hsl(240, 6%, 50%)");
+     
+
     }
     else{
      $('.card-answer').slideUp();
      $('.card-item').removeClass('open');
+     $(this).children('a').css("color","hsl(238, 29%, 16%)");
+     
+
 
      $(this).parents('.card-item').find('.card-answer').slideDown();
-     $(this).parents('.card-item').addClass('open');        
+     $(this).parents('.card-item').addClass('open');   
     }
  });
 });

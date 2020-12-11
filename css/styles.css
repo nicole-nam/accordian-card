@@ -10,6 +10,8 @@ html {
   font-size: 62.5%;
 }
 
+/* mobile first */
+
 body {
   font-family: "Kumbh Sans", sans-serif;
   line-height: 1.7;
@@ -66,11 +68,15 @@ body {
 }
 
 .card-question {
-  color: hsl(240, 6%, 50%);
   border-bottom: 0.5px solid hsl(240, 5%, 91%);
   padding: 1.5rem 0;
   display: flex;
   justify-content: space-between;
+}
+
+.card-question a {
+  text-decoration: none;
+  color: hsl(240, 6%, 50%);
 }
 
 .card-question:last-child {
@@ -100,3 +106,51 @@ body {
     transform: translateY(-2rem);
   }
 } */
+
+/* dekstop */
+
+@media only screen and (min-width: 1024px) {
+  .accordian-container {
+    padding: 15rem 15rem;
+    position: relative;
+  }
+
+  .accordian-card {
+    max-width: 140rem;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url("../images/bg-pattern-desktop.svg"),
+      url("../images/illustration-woman-online-desktop.svg") ;
+    background-repeat: no-repeat;
+    background-position: -35rem, -8rem;
+    background-size: 70rem, 42rem;
+  }
+
+  .accordian-card::before {
+    content: url("../images/illustration-box-desktop.svg");
+    position: absolute;
+    top: 43%;
+    right: 76%;
+    transform: scale(.8,.8);
+
+  }
+
+  .card-heading {
+    padding-top: 10rem;
+  }
+
+  .text-container {
+    width: 50%;
+    text-align: left;
+    padding: 0 10rem;
+  }
+  .faq-container {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .accordian-card::before {
+    right: 83%;
+  }
+}
