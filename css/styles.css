@@ -106,7 +106,6 @@ body {
 @media only screen and (min-width: 1024px) {
   .accordian-container {
     padding: 15rem 15rem;
-    position: relative;
   }
 
   .accordian-card {
