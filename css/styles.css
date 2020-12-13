@@ -115,7 +115,7 @@ hr {
   }
 
   .accordian-card {
-    max-width: 140rem;
+    max-width: 90rem;
     display: flex;
     justify-content: flex-end;
     background-image: url("../images/bg-pattern-desktop.svg"),
@@ -140,7 +140,7 @@ hr {
   .text-container {
     width: 50%;
     text-align: left;
-    padding: 0 10rem;
+    padding: 0 5rem;
   }
   .faq-container {
     padding: 0;
@@ -149,7 +149,12 @@ hr {
 
 @media only screen and (min-width: 1440px) {
   .accordian-card::before {
+<<<<<<< HEAD
     right: 91%;
+=======
+    transform: scale(0.8, 0.8);
+    right: 74%;
+>>>>>>> 9904ba25513a9abe83c3fd9ec247028875377c96
   }
 }
 
