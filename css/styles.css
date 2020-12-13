@@ -31,10 +31,10 @@ body {
 
 .accordian-container {
   padding: 15rem 1.5rem;
-  position: relative;
 }
 
 .accordian-card {
+  position: relative;
   max-width: 60rem;
   margin: 0 auto;
   min-height: 67vh;
@@ -47,7 +47,7 @@ body {
 .accordian-card::before {
   content: url("../images/illustration-woman-online-mobile.svg");
   position: absolute;
-  top: 4rem;
+  top: -10rem;
   right: 50%;
   transform: translateX(45%);
   background-image: url("../images/bg-pattern-mobile.svg");
@@ -68,7 +68,6 @@ body {
 }
 
 .card-question {
-  border-bottom: 0.5px solid hsl(240, 5%, 91%);
   padding: 1.5rem 0;
   display: flex;
   justify-content: space-between;
@@ -83,11 +82,18 @@ body {
   border: none;
 }
 
+hr {
+  height: 0.1rem;
+  background-color: hsl(240, 5%, 91%);
+  border: none;
+  margin-top: 1rem;
+}
+
 .card-question::after {
   content: url("../images/icon-arrow-down.svg");
 }
 
-.arrowUp::after{
+.arrowUp::after {
   transform: rotate(180deg);
 }
 
@@ -123,7 +129,7 @@ body {
     content: url("../images/illustration-box-desktop.svg");
     position: absolute;
     top: 43%;
-    right: 76%;
+    right: 86%;
     transform: scale(0.8, 0.8);
   }
 
@@ -143,9 +149,8 @@ body {
 
 @media only screen and (min-width: 1440px) {
   .accordian-card::before {
-    right: 83%;
+    right: 91%;
   }
 }
-
 
 /* https://nicole-nam.github.io/accordian-card/ */
