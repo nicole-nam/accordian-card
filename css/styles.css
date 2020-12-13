@@ -149,13 +149,8 @@ hr {
 
 @media only screen and (min-width: 1440px) {
   .accordian-card::before {
-<<<<<<< HEAD
     right: 91%;
-=======
-    transform: scale(0.8, 0.8);
-    right: 74%;
->>>>>>> 9904ba25513a9abe83c3fd9ec247028875377c96
   }
 }
 
-/* https://nicole-nam.github.io/accordian-card/ */
+
