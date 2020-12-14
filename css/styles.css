@@ -16,7 +16,7 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   line-height: 1.7;
   font-size: 1.3rem;
-  height: 100vh;
+  height: 100%;
   box-sizing: border-box;
   background-image: linear-gradient(
     to bottom,
