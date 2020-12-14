@@ -26,7 +26,6 @@ body {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
 }
 
 .accordian-container {
@@ -110,6 +109,9 @@ hr {
 /* dekstop */
 
 @media only screen and (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
   .accordian-container {
     padding: 15rem 15rem;
   }
@@ -152,5 +154,3 @@ hr {
     right: 88%;
   }
 }
-
-
